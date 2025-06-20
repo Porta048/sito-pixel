@@ -1,22 +1,3 @@
-// Gestisce lo scorrimento fluido quando si fa clic su un link che punta a un'ancora (#)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        // Impedisce il comportamento predefinito del link (salto brusco)
-        e.preventDefault();
-
-        // Trova l'elemento di destinazione usando l'attributo href del link
-        const target = document.querySelector(this.getAttribute('href'));
-
-        // Se l'elemento di destinazione esiste, scorri dolcemente fino a esso
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth', // Animazione di scorrimento fluida
-                block: 'start'      // Allinea la parte superiore dell'elemento con la parte superiore della finestra
-            });
-        }
-    });
-});
-
 // Funzione per creare un effetto di scrittura a macchina (typewriter)
 function typeWriter(element, text, speed = 100) {
     let i = 0; // Inizializza il contatore dei caratteri
@@ -35,6 +16,15 @@ function typeWriter(element, text, speed = 100) {
     // Avvia l'effetto di scrittura
     type();
 }
+
+// Applica l'effetto typewriter al titolo principale quando la pagina si carica
+document.addEventListener('DOMContentLoaded', () => {
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const originalText = heroTitle.textContent;
+        typeWriter(heroTitle, originalText, 150);
+    }
+});
 
 // Aggiunge un'animazione al pulsante "START GAME" quando viene cliccato
 const startBtn = document.getElementById('startBtn'); // Seleziona il pulsante tramite il suo ID

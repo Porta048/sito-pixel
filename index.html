@@ -14,23 +14,23 @@
     <!-- Foglio di stile personalizzato per ulteriori modifiche -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="scanlines">
     <!-- Sezione dell'intestazione del sito -->
     <header class="pixel-header">
         <div class="container">
             <!-- Titolo principale con icone a forma di moneta -->
             <h1 class="pixel-title">
-                <i class="nes-icon coin is-small"></i>
+                <i class="pixelated" "nes-icon coin is-small pixelated"></i>
                 PIXEL WORLD
                 <i class="nes-icon coin is-small"></i>
             </h1>
             <!-- Menu di navigazione con pulsanti stilizzati -->
             <nav class="pixel-nav">
-                <button type="button" class="nes-btn">Home</button>
-                <button type="button" class="nes-btn is-primary">Games</button>
-                <button type="button" class="nes-btn is-success">About</button>
-                <button type="button" class="nes-btn is-warning">Shop</button>
-                <button type="button" class="nes-btn is-error">Contact</button>
+                <a href="#" class="nes-btn">Home</a>
+                <a href="#games-section" class="nes-btn is-primary">Games</a>
+                <a href="#characters-section" class="nes-btn is-success">Characters</a>
+                <a href="#stats-section" class="nes-btn is-warning">Stats</a>
+                <a href="#dialog-section" class="nes-btn is-error">Contact</a>
             </nav>
         </div>
     </header>
@@ -52,11 +52,11 @@
                 <!-- Gruppo di pulsanti per iniziare il gioco o vedere i punteggi -->
                 <div class="button-group">
                     <button type="button" class="nes-btn is-primary" id="startBtn">
-                        <i class="nes-icon star is-small"></i>
+                        <i class="nes-icon star is-small pixelated"></i>
                         START GAME
                     </button>
                     <button type="button" class="nes-btn is-success">
-                        <i class="nes-icon trophy is-small"></i>
+                        <i class="nes-icon trophy is-small pixelated"></i>
                         HIGH SCORES
                     </button>
                 </div>
@@ -72,7 +72,7 @@
     </section>
 
     <!-- Sezione per la scelta del personaggio -->
-    <section class="section characters-section">
+    <section id="characters-section" class="section characters-section">
         <div class="container">
             <!-- Titolo della sezione -->
             <h2 class="section-title nes-text is-primary">
@@ -83,19 +83,19 @@
             <div class="character-row">
                 <!-- Card per ogni personaggio con icona e nome -->
                 <div class="nes-container is-rounded character-card" data-character="mario">
-                    <i class="nes-mario"></i>
+                    <i class="nes-mario pixelated"></i>
                     <p>Mario</p>
                 </div>
                 <div class="nes-container is-rounded character-card" data-character="ash">
-                    <i class="nes-ash"></i>
+                    <i class="nes-ash pixelated"></i>
                     <p>Ash</p>
                 </div>
                 <div class="nes-container is-rounded character-card" data-character="kirby">
-                    <i class="nes-kirby"></i>
+                    <i class="nes-kirby pixelated"></i>
                     <p>Kirby</p>
                 </div>
                 <div class="nes-container is-rounded character-card" data-character="bulbasaur">
-                    <i class="nes-bulbasaur"></i>
+                    <i class="nes-bulbasaur pixelated"></i>
                     <p>Bulbasaur</p>
                 </div>
             </div>
@@ -103,7 +103,7 @@
     </section>
 
     <!-- Sezione delle statistiche del giocatore -->
-    <section class="section stats-section">
+    <section id="stats-section" class="section stats-section">
         <div class="container">
             <!-- Contenitore scuro per le statistiche -->
             <div class="nes-container is-dark with-title">
@@ -137,11 +137,11 @@
     </section>
 
     <!-- Sezione dei giochi in evidenza -->
-    <section class="section games-section">
+    <section id="games-section" class="section games-section">
         <div class="container">
             <!-- Titolo della sezione con icone a stella -->
             <h2 class="section-title">
-                <i class="nes-icon is-large star"></i>
+                <i class="nes-icon is-large star pixelated"></i>
                 FEATURED GAMES
                 <i class="nes-icon is-large star"></i>
             </h2>
@@ -150,11 +150,11 @@
             <div class="games-grid">
                 <!-- Card per il gioco "Space Adventure" -->
                 <div class="nes-container is-rounded game-card">
-                    <div class="game-icon space-icon"></div>
+                    <div class="game-icon space-icon pixelated"></div>
                     <h3>Space Adventure</h3>
                     <p>Esplora la galassia!</p>
                     <div class="rating">
-                        <i class="nes-icon is-large heart"></i>
+                        <i class="nes-icon is-large heart pixelated"></i>
                         <i class="nes-icon is-large heart"></i>
                         <i class="nes-icon is-large heart is-empty"></i>
                     </div>
@@ -163,7 +163,7 @@
 
                 <!-- Card per il gioco "Monster Catcher" -->
                 <div class="nes-container is-rounded game-card">
-                    <i class="nes-pokeball"></i>
+                    <i class="nes-pokeball pixelated"></i>
                     <h3>Monster Catcher</h3>
                     <p>Catturali tutti!</p>
                     <div class="rating">
@@ -176,7 +176,7 @@
 
                 <!-- Card per il gioco "Racing Legends" -->
                 <div class="nes-container is-rounded game-card">
-                    <i class="nes-icon trophy is-large"></i>
+                    <i class="nes-icon trophy is-large pixelated"></i>
                     <h3>Racing Legends</h3>
                     <p>Vinci la coppa!</p>
                     <div class="nes-badge">
@@ -189,7 +189,7 @@
     </section>
 
     <!-- Sezione con un dialogo interattivo -->
-    <section class="section dialog-section">
+    <section id="dialog-section" class="section dialog-section">
         <div class="container">
             <!-- Fumetto di dialogo stilizzato -->
             <div class="nes-balloon from-left">
@@ -198,6 +198,9 @@
 
             <!-- Pulsanti di opzione per la risposta -->
             <div class="dialog-buttons">
+                <button type="button" class="nes-btn is-success">Yes</button>
+                <button type="button" class="nes-btn is-error">No</button>
+            </div>
                 <label>
                     <input type="radio" class="nes-radio" name="answer" checked />
                     <span>Sì, sono pronto!</span>
@@ -217,11 +220,11 @@
             <h3 class="section-title">CONNECT WITH US</h3>
             <!-- Icone dei social media -->
             <div class="social-links">
-                <i class="nes-icon facebook is-large"></i>
-                <i class="nes-icon twitter is-large"></i>
-                <i class="nes-icon instagram is-large"></i>
-                <i class="nes-icon github is-large"></i>
-                <i class="nes-icon youtube is-large"></i>
+                <i class="nes-icon facebook is-large pixelated"></i>
+                <i class="nes-icon twitter is-large pixelated"></i>
+                <i class="nes-icon instagram is-large pixelated"></i>
+                <i class="nes-icon github is-large pixelated"></i>
+                <i class="nes-icon youtube is-large pixelated"></i>
             </div>
         </div>
     </section>
@@ -229,7 +232,7 @@
     <!-- Footer -->
     <footer class="pixel-footer">
         <div class="container">
-            <p>&copy; 2025 Pixel World - Made with <i class="nes-icon is-small heart"></i> and pixels</p>
+            <p>&copy; 2025 Pixel World - Made with <i class="nes-icon is-small heart pixelated"></i> and pixels</p>
         </div>
     </footer>
 
